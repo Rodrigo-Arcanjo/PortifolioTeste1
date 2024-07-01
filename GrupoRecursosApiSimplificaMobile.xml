@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PortifolioTeste1</name>
+    </assembly>
+    <members>
+        <member name="M:PortifolioTeste1.Controllers.DevEventsController.GetAll">
+            <summary>
+            Obter todos os Eventos
+            </summary>
+            <returns>Coleção de Eventos</returns>
+            <response code = "200">Sucesso</response>
+        </member>
+        <member name="M:PortifolioTeste1.Controllers.DevEventsController.GetById(System.Guid)">
+            <summary>
+            Obter um Evento
+            </summary>
+            <param name="id">Identificador do Evento</param>
+            <returns>Dados de 1 Evento</returns>
+            <response code = "200">Sucesso</response>
+            <response code = "404">Não encontrado</response>
+        </member>
+        <member name="M:PortifolioTeste1.Controllers.DevEventsController.Post(PortifolioTeste1.Models.DevEvent)">
+            <summary>
+            Cadastrar um Evento
+            </summary>
+            <remarks>
+            objeto JSON
+            </remarks>
+            <param name="devEvent">Dados do Evento</param>
+            <returns>Objeto recém-criado</returns>
+            <response code = "201">Sucesso</response>
+        </member>
+        <member name="M:PortifolioTeste1.Controllers.DevEventsController.Update(System.Guid,PortifolioTeste1.Models.DevEvent)">
+            <summary>
+            Atualizar um Evento
+            </summary>
+            <remarks>
+            objeto JSON
+            </remarks>
+            <param name="id">Identificador do Evento</param>
+            <param name="input">Dados do Evento</param>
+            <returns>Nada.</returns>
+            <response code="404">Não encontrado.</response>
+            <response code="204">Sucesso</response>
+        </member>
+        <member name="M:PortifolioTeste1.Controllers.DevEventsController.Delete(System.Guid)">
+            <summary>
+            Deletar um Evento
+            </summary>
+            <param name="id">Identificador de Evento</param>
+            <returns>Nada</returns>
+            <repsonse code="404">Não encontrado</repsonse>
+            <repsonse code="204">Sucesso</repsonse>
+        </member>
+        <member name="M:PortifolioTeste1.Controllers.DevEventsController.PostSpeaker(System.Guid,PortifolioTeste1.Models.DevEventSpeaker)">
+            <summary>
+            Cadastrar Palestrante
+            </summary>
+            <remarks>
+            objeto JSON
+            </remarks>
+            <param name="id">Identificador do Evento</param>
+            <param name="speaker">Dados do palestrante</param>
+            <returns>Nada</returns>
+            <repsonse code="404">Não encontrado</repsonse>
+            <repsonse code="204">Sucesso</repsonse>
+        </member>
+        <member name="M:PortifolioTeste1.Controllers.Ocorrencia.listarOcorrencia(System.String)">
+            <summary>
+            Obter Todos os Processos
+            </summary>
+            <param name="parameter">Matrícula do Agente</param>
+            <returns>Listagem dos processos e todos os seus respectivos dados</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Falha de comunicação com o servidor</response>
+            <response code="404">Não encontrado</response>
+            <response code="500">Erro genérico do servidor</response>
+        </member>
+        <member name="M:PortifolioTeste1.Controllers.Processo.GetProcessos_One(System.String,System.Int32,System.Int32)">
+            <summary>
+            Obter Todos os Processos
+            </summary>
+            <param name="UserId">ID do usuário</param>
+            <param name="REQ_RT">Índice de responsável técnico ou requerente</param>
+            <param name="CurrentItemmount">Qt. Itens</param>
+            <returns>Listagem dos processos e todos os seus respectivos dados</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Falha de comunicação com o servidor</response>
+            <response code="500">Erro genérico do servidor</response>
+        </member>
+        <member name="M:PortifolioTeste1.Controllers.StartApp.Login(System.String,System.String,System.String)">
+            <summary>
+            Obter Todos os Processos
+            </summary>
+            <param name="matriculaAgente">Matrícula do Agente</param>
+            <param name="password">Senha do Agente</param>
+            <param name="imeiAparelho">IMEI do equipamento</param>
+            <returns>Listagem dos processos e todos os seus respectivos dados</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Falha de comunicação com o servidor</response>
+            <response code="404">Não encontrado</response>
+            <response code="500">Erro genérico do servidor</response>
+        </member>
+        <member name="M:PortifolioTeste1.Controllers.StartApp.AppControle(System.String,System.String)">
+            <summary>
+            Atualizar controle de Versão
+            </summary>
+            <param name="imei">IMEI do Aparelho</param>
+            <param name="versao">Versão do App</param>
+            <returns>Data e Versão</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Falha de comunicação com o servidor</response>
+            <response code="404">Não encontrado</response>
+            <response code="500">Erro genérico do servidor</response>
+        </member>
+        <member name="M:PortifolioTeste1.Controllers.StartApp.ListarHorario">
+            <summary>
+            Histórico de Atualização de tabelas
+            </summary>
+            <returns>Nome, Data e Hora</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Falha de comunicação com o servidor</response>
+            <response code="404">Não encontrado</response>
+            <response code="500">Erro genérico do servidor</response>
+        </member>
+        <member name="M:PortifolioTeste1.Controllers.StartApp.tableSQLite(System.String)">
+            <summary>
+            Obter Todos os Processos
+            </summary>
+            <param name="all">Tipo de busca</param>
+            <returns>Listagem dos processos e todos os seus respectivos dados</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Falha de comunicação com o servidor</response>
+            <response code="404">Não encontrado</response>
+            <response code="500">Erro genérico do servidor</response>
+        </member>
+    </members>
+</doc>
